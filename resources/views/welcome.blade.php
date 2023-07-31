@@ -16,7 +16,9 @@
 
 </head>
 <body class="antialiased">
-<h1>Welcome</h1>
-@include('test')
+<div class="p-8">
+    <h1 class="text-2xl">Welcome</h1>
+    @include('test')
+</div>
 </body>
 </html>
