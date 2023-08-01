@@ -1,12 +1,7 @@
 import './bootstrap';
-// Initialization for ES Users
-// import {
-//   Offcanvas,
-//   Ripple,
-//   Dropdown,
-//   initTE,
-// } from "tw-elements";
-//
-// initTE({ Offcanvas, Ripple, Dropdown });
 
-import * as te from "tw-elements";
+const { Offcanvas, initTE } = await import("tw-elements");
+initTE({ Offcanvas });
+
+console.log('initTE', initTE);
+console.log('Offcanvas', Offcanvas);
