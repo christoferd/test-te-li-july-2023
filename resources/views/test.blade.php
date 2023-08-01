@@ -2,11 +2,38 @@
 
     <div>
         <h4>This button causes JS errors</h4>
-        <button class="mr-1.5 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                onclick="const myOffcanvasEl = document.getElementById('offcanvasExample'); const myOffcanvas = new Offcanvas(myOffcanvasEl); myOffcanvas.show();"
-        >TE Open Offcanvas via API/JS
+        <button
+            class="mr-1.5 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            onclick="openOffcanvasES()"
+        >TE Open Offcanvas via API/JS - ES
         </button>
     </div>
+
+    <div>
+        <h4>This button causes JS errors</h4>
+        <button
+            class="mr-1.5 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            onclick=""
+        >TE Open Offcanvas via API/JS - UMD
+        </button>
+    </div>
+
+    <script type="text/javascript">
+        function openOffcanvasES() {
+            const myOffcanvasEl = document.getElementById('offcanvasExample');
+            const myOffcanvas = new Offcanvas(myOffcanvasEl);
+            console.log('myOffcanvas:', myOffcanvas);
+            myOffcanvas.show();
+        }
+
+        function openOffcanvasUMD() {
+            const offcanvasElementList = [].slice.call(document.querySelectorAll('[data-te-offcanvas-init]'));
+            const offcanvasList = offcanvasElementList.map((offcanvasEl) => {
+                return new Offcanvas(offcanvasEl);
+            });
+            console.log('offcanvasList:', offcanvasList);
+        }
+    </script>
 
     <div>
         <h4>These buttons below work</h4>
