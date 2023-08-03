@@ -1,6 +1,10 @@
-let {Offcanvas, initTE} = await import("tw-elements");
+const {Offcanvas, initTE} = await import("tw-elements");
 
-console.log('initTE', initTE);
-console.log('Offcanvas', Offcanvas);
+window.initTE = initTE;
+window.Offcanvas = Offcanvas;
 
 initTE({ Offcanvas });
+
+// console.log('initTE', initTE);
+// console.log('Offcanvas', Offcanvas);
+
