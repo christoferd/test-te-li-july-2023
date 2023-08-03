@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet"/>
 
     @vite('resources/css/app.css')
-    @vite('node_modules/tw-elements/dist/js/tw-elements/tw-elements.es.min.js')
     @vite('resources/js/app.js')
 
 </head>
